@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Postoffice</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+
+<div class="container">
+  <h2>Postoffice</h2>
+ <button class="btn btn-primary" (click)="redirectToAddPostOffice()">Add Postoffice</button><br>  
+  <table id="viewDetailsTbl" class="table">
+    <thead>
+      <tr>
+        <th>Sl.N</th>
+        <th>Postoffice</th>
+        <th>Zipcode</th>
+        <th>Action</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of postOfficeData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.zip_code}}</td>
+        <td><button class="btn btn-warning" (click)="editDetails(data.zip_code)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteDetails(data.zip_code)">Delete</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

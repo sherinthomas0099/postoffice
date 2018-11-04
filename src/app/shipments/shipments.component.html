@@ -1,0 +1,44 @@
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Shipments</h4>
+      <!-- </div> -->
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" id="name" [(ngModel)]="name" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="defaultForm-email">Name</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fa fa-lock prefix grey-text"></i>
+          <input type="text" id="weight" [(ngModel)]="weight" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Weight</label>
+      </div>
+
+
+      
+        <div class="md-form mb-5">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" id="status" [(ngModel)]="status" class="form-control validate">
+            <label data-error="wrong" data-success="right" for="defaultForm-email">Status</label>
+        </div>
+
+        
+
+    </div>
+  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="addShipments()">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
